@@ -12,7 +12,7 @@
     </ion-content>
   </ion-menu>
 
-  <ion-content id='map-content'>
+  <section class="ion-page" id='map-content'>
     <ion-header>
       <ion-toolbar>
         <ion-buttons slot='start'>
@@ -25,12 +25,15 @@
         <ion-title>Select Location</ion-title>
       </ion-toolbar>
     </ion-header>
-    <agm-map [latitude]="+selectedAddress.latitude"
-             [longitude]="+selectedAddress.longitude"
-             [zoom]="18"
-             [clickableIcons]="true"
-             [showDefaultInfowindow]="false"
-             [usePanning]="true"></agm-map>  
-  </ion-content>
+    <ion-content>
+      <agm-map [latitude]="+selectedAddress.latitude"
+              [longitude]="+selectedAddress.longitude"
+              [zoom]="18"
+              [clickableIcons]="true"
+              [showDefaultInfowindow]="false"
+              [usePanning]="true">
+      </agm-map>  
+    </ion-content>
+  </section>
 
 </ion-split-pane>
