@@ -25,7 +25,12 @@
         <ion-title>Select Location</ion-title>
       </ion-toolbar>
     </ion-header>
-    <p>Eventually we'll have a map here.</p>
+    <agm-map [latitude]="+selectedAddress.latitude"
+             [longitude]="+selectedAddress.longitude"
+             [zoom]="18"
+             [clickableIcons]="true"
+             [showDefaultInfowindow]="false"
+             [usePanning]="true"></agm-map>  
   </ion-content>
 
 </ion-split-pane>
