@@ -24,8 +24,12 @@ https://developers.google.com/maps/documentation/javascript/get-api-key
 paste following code and change APIKEYHERE to your api key from step 2.
 
 ``` typescript
-class apikey {
-    GOOGLE_API_KEY: string = 'APIKEYHERE';
+export class apikey {
+    private GOOGLE_API_KEY: string = 'APIKEYHERE';
+
+    public getKey(): string{
+        return this.GOOGLE_API_KEY
+    }
 }
 ```
 

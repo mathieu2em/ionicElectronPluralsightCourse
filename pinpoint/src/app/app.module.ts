@@ -9,13 +9,14 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AgmCoreModule } from '@agm/core';
+import { ApiKey } from '../../.env';
 
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
   imports: [
     AgmCoreModule.forRoot({
-      // apiKey: 'your api key here'
+      apiKey: ApiKey.getKey()
     }),
     BrowserModule, IonicModule.forRoot(), AppRoutingModule],
   providers: [
